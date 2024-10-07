@@ -69,3 +69,17 @@ const totalSalesSalary = calculateDepartmentSalary("Sales");
 console.log(totalEngineeringSalary);
 console.log(totalSalesSalary);
 //Commit 
+// Create a Function to Calculate the Total Salary for All Departments
+function calculateCompanySalary(company) {
+    let totalSalary = employee.salary;
+
+    company.departments.forEach(department => {
+        totalSalary += calculateDepartmentSalary(department);
+    });
+
+    return totalSalary;
+}
+
+const totalCompanySalary = calculateCompanySalary(company);
+console.log(`Total salary for the company: $${totalCompanySalary}`);
+// Commit 
